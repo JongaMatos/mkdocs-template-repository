@@ -17,4 +17,4 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs
       - run: pip install mkdocs-material
-      - run: cd docs && mkdocs build -s
+      - run: mkdocs build -s
