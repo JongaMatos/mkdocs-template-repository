@@ -1,7 +1,9 @@
 name: gh-deploy
 
 on:
-  push:
+  pull_request:
+    types:
+    - closed
     branches:
     - main
 
@@ -9,6 +11,7 @@ on:
 jobs:
 
   deploy:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
