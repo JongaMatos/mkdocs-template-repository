@@ -17,7 +17,7 @@ jobs:
             python-version: 3.x
       - run: pip install mkdocs
       - run: pip install mkdocs-material
-      - run:- run: |
+      - run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
       - run: mkdocs gh-deploy --verbose --strict --clean --force
